@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Upload</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin-top: 20px;
+            background: #eee
+        }
+
+        .container {
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 15px;
+            padding-left: 15px;
+            width: 100%
+        }
+
+        @media (min-width:576px) {
+            .container {
+                max-width: 540px
+            }
+        }
+
+        @media (min-width:768px) {
+            .container {
+                max-width: 720px
+            }
+        }
+
+        @media (min-width:992px) {
+            .container {
+                max-width: 960px
+            }
+        }
+
+        @media (min-width:1200px) {
+            .container {
+                max-width: 1140px
+            }
+        }
+
+        .card-columns .card {
+            margin-bottom: .75rem
+        }
+
+        @media (min-width:576px) {
+            .card-columns {
+                column-count: 3;
+                column-gap: 1.25rem
+            }
+
+                .card-columns .card {
+                    display: inline-block;
+                    width: 100%
+                }
+        }
+
+        .text-muted {
+            color: #9faecb !important
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem !important
+        }
+
+        .input-group {
+            position: relative;
+            display: flex;
+            width: 100%
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row flex-lg-nowrap">
+            <div class="col">
+                <div class="row">
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="e-profile">
+                                    <div class="row">
+                                        <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                            <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                                <h1 class="pt-sm-2 pb-1 mb-0 text-nowrap">Upload Page</h1>
+                                            </div>
+                                            <div class="text-center text-sm-right">
+                                                <span class="badge badge-secondary">Admin User</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                    <form class="form p-3" action="/upload" method="post" enctype="multipart/form-data">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 mb-3">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="custom-controls-stacked px-2">
+
+                                                            <div class="mb-3">
+                                                                <input type="file" name="file">
+                                                            </div>
+
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="radio" class="custom-control-input" name="type" id="mobile" value="mobile" checked>
+                                                                <label class="custom-control-label" for="mobile">Mobile</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="radio" name="type" value="tv" id="tv" class="custom-control-input">
+                                                                <label class="custom-control-label" for="tv">TV</label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="radio" name="type" id="car" value="car" class="custom-control-input">
+                                                                <label class="custom-control-label" for="car">Car</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col d-flex justify-content-end">
+                                                <button class="btn btn-primary" type="submit">Upload</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="px-xl-3">
+                                    <a class="btn btn-block btn-secondary" href="/logout"> <i class="fa fa-sign-out"></i> <span>Logout</span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
